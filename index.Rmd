@@ -1,0 +1,159 @@
+---
+title: '**Selkokirjat suomea oppialle**'
+primary_colour: "#002957"
+secondary_colour: "#004CA3"
+# accent_colour: "#f1573f"
+body_textcol: "#002957"
+affiliation_textcol: "#f1573f"
+main_textcol: "#f1573f"
+author:
+  - name: '**Francisko de Moraes Rezende**'
+    main: true
+    orcid:
+    twitter: francisko_r 
+    email: francisko.rezende@gmail.com
+main_findings:
+  - "Voitte lukea kirjat __suomeksi__ ja voitte __alkaa nyt__"
+  - '![](media/kirjat.png){.main_pic}'
+# affiliation_textcol: "#004CA3"
+logoleft_name: '![](media/jyu-keskitetty-suomi.svg){.main-img-left}'
+logoright_name: '![](media/movi.png){.main-img-right}'
+output: 
+  posterdown::posterdown_betterland:
+    self_contained: false
+    pandoc_args: --mathjax
+    number_sections: false
+    fig_caption: no
+bibliography: packages.bib
+link-citations: true
+nocite: '@*'
+---
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(results = 'asis',
+                      echo = FALSE,
+                      warning = FALSE,
+                      tidy = FALSE,
+                      message = FALSE,
+                      fig.align = 'center',
+                      out.width = "100%",
+                      fig.lp = '')
+options(knitr.table.format = "html") 
+```
+
+```{r pkgs}
+source(here::here("R", "02_libraries.R"))
+```
+
+```{r, include=FALSE}
+knitr::write_bib(c('posterdown', 'rmarkdown','pagedown', 'ggmap', 'ggthemes', 'ggforce', 'knitr'), 'packages.bib')
+```
+
+
+# Mitä?
+
+Selkosuomeksi kirjat ovat kirjoittaa helppo kieli. Nämä kirjat eivät ole kuin lastenkirjat. Selkosuomeksi kirjat ovat tavallinen, joskus aikuinenille, kirjat että olivat sopeuttaa suomea. Ajatelletteko he ovat mielenkiintoista? Löydätte lisää informaatio Hanna Männikkölahtin sivusta: https://privatefinnishlessons.com/books/
+
+<!-- ![Muutama kirjat www.privatefinnishlesson.com/books:sta](`r here::here("media", "selkokirjat.png")`) -->
+
+# Miksi?
+
+Lukea on hyvä oppikalu koska voitte harjoittaa lukea, puhua ja ymmärtää.  Esimerkiksi, voitte lukea teksti ystävänille tai yksin.
+<!-- (HUOM! Väin tehdä toinen suggestio itsellesi). Siksi selko kirjat ovat helppo, me voimme lukea ja ymmärtää heitä. -->
+
+# Missä?
+
+```{r jyv-map-r, include=FALSE}
+load(file = here::here("data", "01_kartta.RData"))
+```
+
+Jyväskylän kaupunginkirjastolla on monta selkosuomeksi kirjat!
+
+Jos haluatte 
+
+
+
+```{r actual-map}
+kartta
+
+# fig.cap="Löydätte kirjasto tästä"
+```
+
+# Videot
+
+<iframe style="border: 0px" frameborder="0" type="text/html" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" oallowfullscreen="true" msallowfullscreen="true" width="100%" src="https://m3.jyu.fi/jyumv/embed?uid=2c3d85eaab0a42599d948982bc1b0480" height="770">
+</iframe>
+
+
+<iframe style="border: 0px" frameborder="0" type="text/html" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" oallowfullscreen="true" msallowfullscreen="true" width="100%" src="https://m3.jyu.fi/jyumv/embed?uid=34d38443ec50432981e2f207da5734a1" height="770">
+</iframe>
+
+
+# Kirjallisuus
+
+Tein tämä posterin R:n kanssa. Käytin nämä paketit:
+
+
+<!-- # Introduction -->
+
+<!-- This is the `posterdown_betterland` template for the {posterdown} package! I was inspired by the twitter thread of [Mike Morrison](https://mobile.twitter.com/mikemorrison/status/1110191245035479041) and wanted to apply the `#betterposter` concept to the reproducible (yet simple to use) functionality of the {posterdown} package [@R-posterdown]. If you're not an R user don't sweat as you do **NOT** need to use it at all! Feel free to use only the Markdown functionality of this package :) -->
+
+<!-- ## Objectives -->
+
+<!-- 1. Pick a template layout. -->
+<!-- 2. Write/ create your poster content distraction free. -->
+<!-- 3. Let posterdown do its thing! -->
+
+<!-- # Methods -->
+
+<!-- I will show here how to include poster elements that may be useful, such as an equation using mathjax: -->
+
+<!-- $$ -->
+<!-- E = mc^2 -->
+<!-- $$ -->
+
+<!-- To reference a citation you can add your `.bib` file to the working directory and name it in the YAML metadata or generate an automated one as done here, then you only need to reference the label value in the `.bib` file. For example this package is built on top of the wonderful {pagedown} package and I will cite it at the end of this sentance using this in the rmd `[@R-pagedown]` [@R-pagedown]. -->
+
+<!-- To get a better understanding of how to include features like these please refer to the {posterdown} [wiki](https://github.com/posterdown/wiki). -->
+
+<!-- **_Now on to the results!_** -->
+
+<!-- <br> -->
+
+<!-- # Results -->
+
+<!-- Here you may have some figures to show off, bellow I have made a scatterplot with the infamous Iris dataset and I can even reference to the figure automatically like this, `Figure \@ref(fig:irisfigure)`, Figure \@ref(fig:irisfigure). -->
+
+<!-- ```{r, irisfigure, fig.cap='Here is a caption for the figure. This can be added by using the "fig.cap" option in the r code chunk options, see this [link](https://yihui.name/knitr/options/#plots) from the legend himself, [Yihui Xie](https://twitter.com/xieyihui).', out.width="80%"} -->
+<!-- par(mar=c(2,2,0,1)) -->
+<!-- plot(x = iris$Sepal.Length, y = iris$Sepal.Width, -->
+<!--      col = iris$Species, pch = 19, xlab = "Sepal Length", -->
+<!--      ylab = "Sepal Width") -->
+<!-- ``` -->
+
+<!-- Maybe you want to show off some of that fancy code you spent so much time on to make that figure, well you can do that too! Just use the `echo=TRUE` option in the r code chunk options, Figure \@ref(fig:myprettycode)! -->
+
+<!-- ```{r myprettycode, echo=FALSE,collapse=TRUE, fig.cap='Boxplots, so hot right now!', fig.height=3.5, out.width="80%"} -->
+<!-- #trim whitespace -->
+<!-- par(mar=c(2,2,0,0)) -->
+<!-- #plot boxplots -->
+<!-- boxplot(iris$Sepal.Width~iris$Species, -->
+<!--         col = "#008080",  -->
+<!--         border = "#0b4545", -->
+<!--         ylab = "Sepal Width (cm)", -->
+<!--         xlab = "Species") -->
+<!-- ``` -->
+
+<!-- How about a neat table of data? See, Table \@ref(tab:iristable): -->
+
+<!-- ```{r, iristable} -->
+<!-- knitr::kable( -->
+<!--   iris[1:8,1:5], format = "html", -->
+<!--   caption = "A table made with the **knitr::kable** function.", -->
+<!--   align = "c", col.names = c("Sepal <br> Length", -->
+<!--                              "Sepal <br> Width", -->
+<!--                              "Petal <br> Length", -->
+<!--                              "Petal <br> Width", -->
+<!--                              "Species"), -->
+<!--   escape = FALSE) -->
+<!-- ``` -->
