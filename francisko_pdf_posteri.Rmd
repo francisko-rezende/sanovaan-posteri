@@ -110,7 +110,7 @@ Nyt luen:
 
 # Kirjallisuus ja kiitokset
 
-Kiitos M. Oksala, J. Lainio, E. Lee, I. Mian ja J. Pajwani auttosta tämä posteri.
+Kiitos M. Oksala, J. Lainio, E. Lee, I. Mian ja J. Panjwani auttosta tämä posteri.
 
 Tein tämä posterin R:n kanssa. Käytin nämä paketit:
 
