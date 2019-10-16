@@ -6,7 +6,7 @@ secondary_colour: "#004CA3"
 body_textcol: "#002957"
 affiliation_textcol: "#f1573f"
 main_textcol: "#f1573f"
-reference_textsize: "19px"
+reference_textsize: "15px"
 author:
   - name: '**Francisko de Moraes Rezende**'
     main: true
@@ -18,6 +18,7 @@ main_findings:
   - '![](media/kirjat.png){.main_pic}'
 # affiliation_textcol: "#004CA3"
 logoleft_name: '![](media/jyu-keskitetty-suomi.svg){.main-img-left}'
+# logoleft_name: '![](media/qrcode_2.svg){.main-img-left}'
 logoright_name: '![](media/movi.png){.main-img-right}'
 output: 
   posterdown::posterdown_betterland:
@@ -105,7 +106,9 @@ Nyt luen “Toppatakin alla on sydän”. Kirjalla on monta pieni tekstit ja yri
 <!-- ![](media/toppa.jpg) -->
 <!-- </center> -->
 
-# Kirjallisuus
+# Kirjallisuus ja kiitokset
+
+Kiitos M. Oksala, J. Lainio, E. Lee, I. Mian ja J. Pajwani auttosta tämä posteri.
 
 Tein tämä posterin R:n kanssa. Käytin nämä paketit:
 
