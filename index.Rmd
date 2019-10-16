@@ -6,6 +6,7 @@ secondary_colour: "#004CA3"
 body_textcol: "#002957"
 affiliation_textcol: "#f1573f"
 main_textcol: "#f1573f"
+reference_textsize: "19px"
 author:
   - name: '**Francisko de Moraes Rezende**'
     main: true
@@ -46,7 +47,7 @@ source(here::here("R", "02_libraries.R"))
 ```
 
 ```{r, include=FALSE}
-knitr::write_bib(c('posterdown', 'rmarkdown','pagedown', 'ggmap', 'ggthemes', 'ggforce', 'knitr', 'here', 'tidyverse'), 'packages.bib')
+knitr::write_bib(c('posterdown', 'rmarkdown','pagedown', 'ggmap', 'ggthemes', 'ggforce', 'knitr', 'here', 'tibble', 'readr', 'ggplot2', 'base'), 'packages.bib')
 ```
 
 
@@ -54,6 +55,7 @@ knitr::write_bib(c('posterdown', 'rmarkdown','pagedown', 'ggmap', 'ggthemes', 'g
 
 Selkosuomeksi kirjat on kirjoitettu helpolla kielellä. Nämä kirjat eivät ole kuin lastenkirjat. Selkosuomeksi kirjat ovat tavallisia, joskus aikuisille, kirjat on mukautettu yleiskieleltä selkokielelle. 
 <!-- Ajatelletteko ne ovat mielenkiintoista?  -->
+
 Löydätte lisää informaatio Hanna Männikkölahden sivusta: https://privatefinnishlessons.com/books/
 
 # Miksi?
@@ -81,7 +83,7 @@ kartta
 
 # Miten?
 
-Nyt luen “Toppatakin alla on sydän”. Kirjalla on monta pieni tekstit ja yritän lukea yksi teksti joka päivä. En ymmärrä kaikki sanat, ajattelen että ymmärtää tekstin idea riittää. Kun en ymmärrä sanat, kirjoitan heitä ja haen mitä ne tarkoittavat sanakirjasta.
+Nyt luen “Toppatakin alla on sydän”. Kirjalla on monta pieni tekstit ja yritän lukea yksi teksti joka päivä. En ymmärrä kaikki sanat, ajattelen että ymmärtää tekstin idea riittää. Kun en ymmärrä sanat, kirjoitan niitä ja haen mitä ne tarkoittavat sanakirjasta.
 
 # Media
 
@@ -90,8 +92,8 @@ Nyt luen “Toppatakin alla on sydän”. Kirjalla on monta pieni tekstit ja yri
 <!-- </center> -->
 
 
-<!-- <iframe style="border: 0px" frameborder="0" type="text/html" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" oallowfullscreen="true" msallowfullscreen="true" width="100%" src="https://m3.jyu.fi/jyumv/embed?uid=2c3d85eaab0a42599d948982bc1b0480" height="770"> -->
-<!-- </iframe> -->
+<iframe style="border: 0px" frameborder="0" type="text/html" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" oallowfullscreen="true" msallowfullscreen="true" width="100%" src="https://m3.jyu.fi/jyumv/embed?uid=2c3d85eaab0a42599d948982bc1b0480" height="770">
+</iframe>
 
 
 
@@ -99,10 +101,9 @@ Nyt luen “Toppatakin alla on sydän”. Kirjalla on monta pieni tekstit ja yri
 <iframe style="border: 0px" frameborder="0" type="text/html" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" oallowfullscreen="true" msallowfullscreen="true" width="100%" src="https://m3.jyu.fi/jyumv/embed?uid=34d38443ec50432981e2f207da5734a1" height="770">
 </iframe>
 
-<center>
-<!-- ![](http://placekitten.com/800/800) -->
-![](media/toppa.jpg)
-</center>
+<!-- <center> -->
+<!-- ![](media/toppa.jpg) -->
+<!-- </center> -->
 
 # Kirjallisuus
 
