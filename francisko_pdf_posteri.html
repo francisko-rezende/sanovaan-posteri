@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+<title>Selkokirjat suomea oppialle</title>
+
+
+
+
+
+
+<!--
+Font-awesome icons ie github or twitter
+-->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/brands.css" integrity="sha384-n9+6/aSqa9lBidZMRCQHTHKJscPq6NW4pCQBiMmHdUCvPN8ZOg2zJJTkC7WIezWv" crossorigin="anonymous">
+
+<!--
+Google fonts api stuff
+-->
+<link href='https://fonts.googleapis.com/css?family=Special Elite' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Rasa' rel='stylesheet'>
+
+<!--
+Here are the required style attributes for css to make this poster work :)
+-->
+<style>
+@page {
+size: 46in 32in;
+margin: 0;
+padding: 0;
+background-color: #ffffff;
+}
+body {
+margin: 0px;
+padding: 0px;
+width: 46in;
+height: 32in;
+text-align: justify;
+font-size: 45px;
+background-color: #FFFFFF;
+color: #002957;
+}
+/* RMarkdown Class Styles */
+/* center align leaflet map,
+from https://stackoverflow.com/questions/52112119/center-leaflet-in-a-rmarkdown-document */
+.html-widget {
+margin: auto;
+position: sticky;
+margin-top: 2cm;
+margin-bottom: 2cm;
+}
+.leaflet.html-widget.html-widget-static-bound.leaflet-container.leaflet-touch.leaflet-fade-anim.leaflet-grab.leaflet-touch-drag.leaflet-touch-zoom {
+position: sticky;
+width: 100%;
+}
+pre.sourceCode.r {
+background-color: #dddddd40;
+border-radius: 4mm;
+padding: 4mm;
+width: 75%;
+margin: auto;
+margin-top: 1em;
+margin-bottom: 1em;
+/* align-items: center; */
+}
+code.sourceCode.r{
+background-color: transparent;
+font-size: 20pt;
+border-radius: 2mm;
+}
+code {
+font-size: 25pt;
+font-family: monospace;
+background-color: #004CA324;
+color: #002957;
+padding: 1.2mm;
+line-height: 1;
+border-radius: 2mm;
+}
+caption {
+margin-bottom: 10px;
+font-size: 20pt;
+font-style: italic;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #00295720;
+}
+.table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td{
+  border-spacing: 0;
+  font-size: 40%;
+  border-style: none;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 1em;
+  padding-left: 1em;
+  line-height: 1em;
+}
+table {
+  margin: auto;
+}
+th {
+  padding-left: 5mm;
+  padding-right: 5mm;
+}
+.caption {
+font-size: 20pt;
+font-style: italic;
+padding-top: 0;
+}
+.references {
+font-size: 26px;
+line-height: 90%;
+}
+/* Create three unequal columns that floats next to each other */
+.column {
+float: left;
+padding: 0px;
+}
+.outer {
+width: 46in;
+height: 32in;
+-webkit-column-count: 2; /* Chrome, Safari, Opera */
+-moz-column-count: 2; /* Firefox */
+column-count: 2;
+-webkit-column-fill: auto;
+-moz-column-fill: auto;
+column-fill: auto;
+-webkit-column-rule-width: 50%;
+-moz-column-rule-width: 50%;
+column-rule-width: 50%;
+-webkit-column-rule-style: solid;
+-moz-column-rule-style: solid;
+column-rule-style: solid;
+-webkit-column-rule-color: black;
+-moz-column-rule-color: black;
+column-rule-color: black;
+-webkit-column-gap: 50%;
+background-color: #ffffff;
+font-family: Rasa;
+color: #002957;
+}
+span.citation {
+  color: #004CA3;
+  font-weight: bold;
+}
+a {
+text-decoration: none;
+color: #004CA3;
+}
+#title {
+font-size: 125pt;
+text-align: left;
+margin: 0;
+line-height: 90%;
+border-bottom: 0;
+}
+#author {
+color: #002957;
+margin: 0;
+line-height: 90%;
+font-size: 1.17em;
+}
+#affiliation {
+padding-top: 1em;
+color: #f1573f;
+font-style: italic;
+font-size: 25px;
+margin: 0;
+}
+sup {
+color: #cc0000;
+}
+.affiliation sup {
+font-size: 20px;
+}
+.author sup {
+font-size: 30px;
+}
+.author_extra {
+color: #004CA3;
+margin: 0;
+line-height: 85%;
+font-size: 35px;
+}
+.outer h1 {
+text-align: center;
+margin-top: 0.5in;
+margin-bottom: 0.5in;
+}
+.outer h2 {
+text-align: center;
+}
+.outer p {
+color: #002957;
+}
+.outer ol {
+text-align: left;
+}
+.main {
+width: calc(46in / 2);
+height: 32in;
+position: absolute;
+margin-left: calc(46in / 4);
+background-color: #002957;
+color: #f1573f;
+font-family: Special Elite;
+background-image: linear-gradient(#002957 50%, #004CA3);
+}
+.main strong {
+color: #FFFFFF;
+}
+img.main-img-left {
+width: 20%;
+left: 0.5in;
+bottom: 0.2in;
+position: absolute;
+}
+img.main-img-right {
+width: 18%;
+right: 0.5in;
+bottom: 0.2in;
+position: absolute;
+}
+.main p {
+padding-top: 20%;
+font-size: 170px;
+text-align: left;
+}
+.fab {
+color: #f1573f;
+font-size: 25px;
+}
+.twitter, i {
+color: #f1573f;
+font-size: 35px;
+text-decoration: none;
+}
+a.email {
+text-decoration: none;
+color: #f1573f;
+font-size: 35px;
+}
+.envelope {
+color: #f1573f;
+font-size: 5px;
+text-decoration: none;
+}
+.poster_wrap {
+width: 46in;
+height: 32in;
+padding: 0cm;
+background-color: #ffffff;
+}
+span > #tab:mytable {
+  font-weight: bold;
+}
+.section {
+  padding-left: 10mm;
+  padding-right: 10mm;
+}
+.main p {
+  padding-left: 30mm;
+  padding-right: 30mm;
+}
+.main_pic {
+  width: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.orcid img {
+  width: 3%;
+}
+</style>
+</head>
+<body>
+
+
+<div class="poster_wrap">
+<div class="column outer">
+<br>
+<div class="title section">
+<h1 id="title"><strong>Selkokirjat suomea oppialle</strong></h1>
+<br>
+<h3 id="author" class="author">
+
+<strong>Francisko de Moraes Rezende</strong><sup> </sup><br>
+<a class="twitter" href="https://mobile.twitter.com/francisko_r"><i class="fab fa-twitter"></i>&nbsp;&nbsp;@francisko_r</a><br>
+
+<a class='envelope'><i class="fas fa-envelope"></i></a> <a href="mailto:francisko.rezende@gmail.com" class="email">francisko.rezende@gmail.com</a> <br>
+</h3>
+
+<h5 id="author_extra" class="author_extra">
+</h5>
+
+<p id="affiliation" class="affiliation">
+
+</p>
+
+</div>
+<div id="mitä" class="section level1">
+<h1>Mitä?</h1>
+<p>Selkosuomeksi kirjat on kirjoitettu helpolla kielellä. Nämä kirjat eivät ole kuin lastenkirjat. Selkosuomeksi kirjat ovat tavallisia, joskus aikuisille, kirjat on mukautettu yleiskieleltä selkokielelle.
+<!-- Ajatelletteko ne ovat mielenkiintoista?  --></p>
+<p>Löydätte lisää informaatio Hanna Männikkölahden sivusta: <a href="https://privatefinnishlessons.com/books/" class="uri">https://privatefinnishlessons.com/books/</a></p>
+</div>
+<div id="miksi" class="section level1">
+<h1>Miksi?</h1>
+<p>Lukea on hyvä väline koska voitte harjoittaa lukemista, puhumista ja ymmärtämistä. Esimerkiksi, voitte lukea teksti ystävälle tai yksin.</p>
+</div>
+<div id="missä" class="section level1">
+<h1>Missä?</h1>
+<p>Jyväskylän kaupunginkirjastolla on monta selkosuomeksi kirjat!</p>
+<p>Jos haluatte lainata kirja kirjastosta, tarvitsette kirjastokortti. Tarvitsette ottaa kuvallinen henkilökortti kirjastoon jotta he tekevät kirjastokortti sinulle. Ensimmäinen kortti on ilmainen.
+Ettekö tiedä missä kirjasto on? Näette karttassa.</p>
+<p><img src="francisko_pdf_posteri_files/figure-html/actual-map-1.png" width="90%" style="display: block; margin: auto;" /></p>
+</div>
+<div id="miten" class="section level1">
+<h1>Miten?</h1>
+<p>Nyt luen “Toppatakin alla on sydän”. Kirjalla on monta pieni tekstit ja yritän lukea yksi teksti joka päivä. En ymmärrä kaikki sanat, ajattelen että ymmärtää tekstin idea riittää. Kun en ymmärrä sanat, kirjoitan niitä ja haen mitä ne tarkoittavat sanakirjasta.</p>
+</div>
+<div id="media" class="section level1">
+<h1>Media</h1>
+<!-- <center> -->
+<!-- ![](http://placekitten.com/750/700) -->
+<!-- </center> -->
+<!-- <iframe style="border: 0px" frameborder="0" type="text/html" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" oallowfullscreen="true" msallowfullscreen="true" width="100%" src="https://m3.jyu.fi/jyumv/embed?uid=2c3d85eaab0a42599d948982bc1b0480" height="770"> -->
+<!-- </iframe> -->
+Muut selkokirjat Hanna Männikkölahden sivusta:
+<center>
+<img src="media/selkokirjat.png" />
+</center>
+<!-- <iframe style="border: 0px" frameborder="0" type="text/html" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" oallowfullscreen="true" msallowfullscreen="true" width="100%" src="https://m3.jyu.fi/jyumv/embed?uid=34d38443ec50432981e2f207da5734a1" height="770"> -->
+<!-- </iframe> -->
+Nyt luen:
+<center>
+<img src="media/toppa.jpg" />
+</center>
+</div>
+<div id="kirjallisuus-ja-kiitokset" class="section level1">
+<h1>Kirjallisuus ja kiitokset</h1>
+<p>Kiitos M. Oksala, J. Lainio, E. Lee, I. Mian ja J. Pajwani auttosta tämä posteri.</p>
+<p>Tein tämä posterin R:n kanssa. Käytin nämä paketit:</p>
+<!-- # Introduction -->
+<!-- This is the `posterdown_betterland` template for the {posterdown} package! I was inspired by the twitter thread of [Mike Morrison](https://mobile.twitter.com/mikemorrison/status/1110191245035479041) and wanted to apply the `#betterposter` concept to the reproducible (yet simple to use) functionality of the {posterdown} package [@R-posterdown]. If you're not an R user don't sweat as you do **NOT** need to use it at all! Feel free to use only the Markdown functionality of this package :) -->
+<!-- ## Objectives -->
+<!-- 1. Pick a template layout. -->
+<!-- 2. Write/ create your poster content distraction free. -->
+<!-- 3. Let posterdown do its thing! -->
+<!-- # Methods -->
+<!-- I will show here how to include poster elements that may be useful, such as an equation using mathjax: -->
+<!-- $$ -->
+<!-- E = mc^2 -->
+<!-- $$ -->
+<!-- To reference a citation you can add your `.bib` file to the working directory and name it in the YAML metadata or generate an automated one as done here, then you only need to reference the label value in the `.bib` file. For example this package is built on top of the wonderful {pagedown} package and I will cite it at the end of this sentance using this in the rmd `[@R-pagedown]` [@R-pagedown]. -->
+<!-- To get a better understanding of how to include features like these please refer to the {posterdown} [wiki](https://github.com/posterdown/wiki). -->
+<!-- **_Now on to the results!_** -->
+<!-- <br> -->
+<!-- # Results -->
+<!-- Here you may have some figures to show off, bellow I have made a scatterplot with the infamous Iris dataset and I can even reference to the figure automatically like this, `Figure \@ref(fig:irisfigure)`, Figure \@ref(fig:irisfigure). -->
+<!-- ```{r, irisfigure, fig.cap='Here is a caption for the figure. This can be added by using the "fig.cap" option in the r code chunk options, see this [link](https://yihui.name/knitr/options/#plots) from the legend himself, [Yihui Xie](https://twitter.com/xieyihui).', out.width="80%"} -->
+<!-- par(mar=c(2,2,0,1)) -->
+<!-- plot(x = iris$Sepal.Length, y = iris$Sepal.Width, -->
+<!--      col = iris$Species, pch = 19, xlab = "Sepal Length", -->
+<!--      ylab = "Sepal Width") -->
+<!-- ``` -->
+<!-- Maybe you want to show off some of that fancy code you spent so much time on to make that figure, well you can do that too! Just use the `echo=TRUE` option in the r code chunk options, Figure \@ref(fig:myprettycode)! -->
+<!-- ```{r myprettycode, echo=FALSE,collapse=TRUE, fig.cap='Boxplots, so hot right now!', fig.height=3.5, out.width="80%"} -->
+<!-- #trim whitespace -->
+<!-- par(mar=c(2,2,0,0)) -->
+<!-- #plot boxplots -->
+<!-- boxplot(iris$Sepal.Width~iris$Species, -->
+<!--         col = "#008080",  -->
+<!--         border = "#0b4545", -->
+<!--         ylab = "Sepal Width (cm)", -->
+<!--         xlab = "Species") -->
+<!-- ``` -->
+<!-- How about a neat table of data? See, Table \@ref(tab:iristable): -->
+<!-- ```{r, iristable} -->
+<!-- knitr::kable( -->
+<!--   iris[1:8,1:5], format = "html", -->
+<!--   caption = "A table made with the **knitr::kable** function.", -->
+<!--   align = "c", col.names = c("Sepal <br> Length", -->
+<!--                              "Sepal <br> Width", -->
+<!--                              "Petal <br> Length", -->
+<!--                              "Petal <br> Width", -->
+<!--                              "Species"), -->
+<!--   escape = FALSE) -->
+<!-- ``` -->
+<div id="refs" class="references">
+<div id="ref-R-rmarkdown">
+<p>Allaire, JJ, Yihui Xie, Jonathan McPherson, Javier Luraschi, Kevin Ushey, Aron Atkins, Hadley Wickham, Joe Cheng, Winston Chang, and Richard Iannone. 2019. <em>Rmarkdown: Dynamic Documents for R</em>. <a href="https://CRAN.R-project.org/package=rmarkdown">https://CRAN.R-project.org/package=rmarkdown</a>.</p>
+</div>
+<div id="ref-R-ggthemes">
+<p>Arnold, Jeffrey B. 2019. <em>Ggthemes: Extra Themes, Scales and Geoms for ’Ggplot2’</em>. <a href="https://CRAN.R-project.org/package=ggthemes">https://CRAN.R-project.org/package=ggthemes</a>.</p>
+</div>
+<div id="ref-R-ggmap">
+<p>Kahle, David, Hadley Wickham, and Scott Jackson. 2019. <em>Ggmap: Spatial Visualization with Ggplot2</em>. <a href="https://CRAN.R-project.org/package=ggmap">https://CRAN.R-project.org/package=ggmap</a>.</p>
+</div>
+<div id="ref-R-here">
+<p>Müller, Kirill. 2017. <em>Here: A Simpler Way to Find Your Files</em>. <a href="https://CRAN.R-project.org/package=here">https://CRAN.R-project.org/package=here</a>.</p>
+</div>
+<div id="ref-R-tibble">
+<p>Müller, Kirill, and Hadley Wickham. 2019. <em>Tibble: Simple Data Frames</em>. <a href="https://CRAN.R-project.org/package=tibble">https://CRAN.R-project.org/package=tibble</a>.</p>
+</div>
+<div id="ref-R-ggforce">
+<p>Pedersen, Thomas Lin. 2019. <em>Ggforce: Accelerating ’Ggplot2’</em>. <a href="https://CRAN.R-project.org/package=ggforce">https://CRAN.R-project.org/package=ggforce</a>.</p>
+</div>
+<div id="ref-R-base">
+<p>R Core Team. 2019. <em>R: A Language and Environment for Statistical Computing</em>. Vienna, Austria: R Foundation for Statistical Computing. <a href="https://www.R-project.org/">https://www.R-project.org/</a>.</p>
+</div>
+<div id="ref-R-posterdown">
+<p>Thorne, Brent. 2019. <em>Posterdown: Generate Pdf Conference Posters Using R Markdown</em>. <a href="https://CRAN.R-project.org/package=posterdown">https://CRAN.R-project.org/package=posterdown</a>.</p>
+</div>
+<div id="ref-R-ggplot2">
+<p>Wickham, Hadley, Winston Chang, Lionel Henry, Thomas Lin Pedersen, Kohske Takahashi, Claus Wilke, Kara Woo, and Hiroaki Yutani. 2019. <em>Ggplot2: Create Elegant Data Visualisations Using the Grammar of Graphics</em>. <a href="https://CRAN.R-project.org/package=ggplot2">https://CRAN.R-project.org/package=ggplot2</a>.</p>
+</div>
+<div id="ref-R-readr">
+<p>Wickham, Hadley, Jim Hester, and Romain Francois. 2018. <em>Readr: Read Rectangular Text Data</em>. <a href="https://CRAN.R-project.org/package=readr">https://CRAN.R-project.org/package=readr</a>.</p>
+</div>
+<div id="ref-R-knitr">
+<p>Xie, Yihui. 2019. <em>Knitr: A General-Purpose Package for Dynamic Report Generation in R</em>. <a href="https://CRAN.R-project.org/package=knitr">https://CRAN.R-project.org/package=knitr</a>.</p>
+</div>
+<div id="ref-R-pagedown">
+<p>Xie, Yihui, Romain Lesur, and Brent Thorne. 2019. <em>Pagedown: Paginate the Html Output of R Markdown with Css for Print</em>. <a href="https://CRAN.R-project.org/package=pagedown">https://CRAN.R-project.org/package=pagedown</a>.</p>
+</div>
+</div>
+</div>
+
+</div>
+<div class="main">
+<p>Voitte lukea kirjat <strong>suomeksi</strong> ja voitte <strong>alkaa nyt</strong><br><br> <img src="media/kirjat.png" class="main_pic" /></p>
+<img src="media/jyu-keskitetty-suomi.svg" class="main-img-left" />
+<img src="media/movi.png" class="main-img-right" />
+</div>
+</div>
+
+
+
+</body>
+</html>
