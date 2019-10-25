@@ -6,7 +6,7 @@ secondary_colour: "#004CA3"
 body_textcol: "#002957"
 affiliation_textcol: "#f1573f"
 main_textcol: "#f1573f"
-reference_textsize: "18px"
+# reference_textsize: "18px"
 author:
   - name: '**Francisko de Moraes Rezende**'
     main: true
