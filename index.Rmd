@@ -6,7 +6,7 @@ secondary_colour: "#004CA3"
 body_textcol: "#002957"
 affiliation_textcol: "#f1573f"
 main_textcol: "#f1573f"
-reference_textsize: "15px"
+reference_textsize: "18px"
 author:
   - name: '**Francisko de Moraes Rezende**'
     main: true
@@ -93,18 +93,15 @@ Nyt luen “Toppatakin alla on sydän”. Kirjalla on monta pieni tekstit ja yri
 <!-- </center> -->
 
 
-<iframe style="border: 0px" frameborder="0" type="text/html" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" oallowfullscreen="true" msallowfullscreen="true" width="100%" src="https://m3.jyu.fi/jyumv/embed?uid=2c3d85eaab0a42599d948982bc1b0480" height="770">
+<iframe style="border: 0px" frameborder="0" type="text/html" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" oallowfullscreen="true" msallowfullscreen="true" width="100%" src="https://www.youtube.com/embed/5v_XCWQ6j8U" height="770">
 </iframe>
 
 
 
 
-<iframe style="border: 0px" frameborder="0" type="text/html" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" oallowfullscreen="true" msallowfullscreen="true" width="100%" src="https://m3.jyu.fi/jyumv/embed?uid=34d38443ec50432981e2f207da5734a1" height="770">
-</iframe>
-
-<!-- <center> -->
-<!-- ![](media/toppa.jpg) -->
-<!-- </center> -->
+Muut selkokirjat Hanna Männikkölahden sivusta:
+<center>
+![](media/selkokirjat.png)
 
 # Kirjallisuus ja kiitokset
 
